@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+    --color-pri-rgb: 87, 106, 120;
+        /* HEX:  #576A78 */
+    --color-sec-rgb: 120, 107, 87;
+        /* HEX:  #786B57 */
+}       
+
+/* 
+    Apply default style
+*/
+
+@theme {
+    --font-pri: 'Lithograph', serif;
+    --font-sec: 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+
+    --color-pri: rgba(var(--color-pri-rgb), 1);
+    --color-pri-o-90: rgba(var(--color-pri-rgb), 0.9);
+    --color-pri-o-80: rgba(var(--color-pri-rgb), 0.8);
+    --color-pri-o-70: rgba(var(--color-pri-rgb), 0.7);
+    --color-pri-o-60: rgba(var(--color-pri-rgb), 0.6);
+    --color-pri-o-50: rgba(var(--color-pri-rgb), 0.5);
+    --color-pri-o-40: rgba(var(--color-pri-rgb), 0.4);
+    --color-pri-o-30: rgba(var(--color-pri-rgb), 0.3);
+    --color-pri-o-20: rgba(var(--color-pri-rgb), 0.2);
+    --color-pri-o-10: rgba(var(--color-pri-rgb), 0.1);    
+
+    --color-sec: rgba(var(--color-sec-rgb), 1);
+    --color-sec-o-90: rgba(var(--color-sec-rgb), 0.9);
+    --color-sec-o-80: rgba(var(--color-sec-rgb), 0.8);
+    --color-sec-o-70: rgba(var(--color-sec-rgb), 0.7);
+    --color-sec-o-60: rgba(var(--color-sec-rgb), 0.6);
+    --color-sec-o-50: rgba(var(--color-sec-rgb), 0.5);
+    --color-sec-o-40: rgba(var(--color-sec-rgb), 0.4);
+    --color-sec-o-30: rgba(var(--color-sec-rgb), 0.3);
+    --color-sec-o-20: rgba(var(--color-sec-rgb), 0.2);
+    --color-sec-o-10: rgba(var(--color-sec-rgb), 0.1);
+
+}
+
+@layer base {
+
+    /*
+        Import Fonts
+    */
+    @font-face {
+        font-family: 'Lithograph';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("../font/lithograph.ttf");
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("../font/Roboto-Regular.ttf");
+    }
+
+    /*
+        Import Icons
+    */
+
+    @font-face {
+        font-family: 'Material Symbols Outlined';
+        font-style: normal;
+        src: url("../font/icons/MaterialSymbolsOutlined.woff2") format('woff2');
+    }
+    .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined' !important;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+    }
+    /* 
+        Change icons: 
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+    */
+
+    /* 
+        Style text
+    */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-pri;
+    }
+
+    p {
+        @apply font-sec;
+    }
+}
+
+
+@layer components {
+    .button-pri {
+        @apply inline-flex border-0 py-2 px-6 focus:outline-none text-lg text-white font-pri bg-pri hover:bg-pri-o-90 transition duration-100 ease-linear cursor-pointer;
+    }
+
+    .button-sec {
+        @apply inline-flex border-0 py-2 px-6 focus:outline-none text-lg font-pri bg-pri-o-10 hover:bg-pri-o-20 transition duration-100 ease-linear cursor-pointer;
+    }
+
+    .link {
+        @apply hover:text-sec transition-colors ease-linear duration-75
+    }
+
+    .popupContainer {
+        @apply hidden place-items-center justify-center fixed top-0 left-0 w-full h-full bg-black/50 z-10;
+    }
+    .popupImg {
+        @apply w-auto h-auto max-w-svw max-h-svh;
+    }
+    .closePopup {
+        @apply grid place-items-center absolute w-12 h-12 top-4 right-4 text-white bg-transparent rounded-full cursor-pointer hover:bg-white/20;
+    }
+    .closePopupIcon {
+        @apply text-4xl;
+    }
+    .imgWithPopup {
+        @apply w-full h-full max-w-80 max-h-80 object-cover object-center cursor-pointer;
+    }
+}

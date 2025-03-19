@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/tailwind.css">
+    <title>Steingestaltung Jürgen Wütherich - Kontakt</title>
+</head>
+
+<body class="overflow-x-hidden min-h-screen grid grid-rows-body">
+    <header class="text-gray-600 body-font sticky top-0 bg-gray-100 z-10">
+        <div class="container mx-auto flex p-5 md:flex-row lg:flex-row items-center justify-center">
+            <a href="../index.html" class="flex title-font font-medium items-center">
+                <img src="../img/icon.jpg" alt="icon" class="w-16">
+                <p class="ml-6 text-2xl color-pri font-pri flex flex-col md:flex-row gap-2"><span>Steingestaltung</span> <span class="hidden sm:block">Jürgen Wütherich</span></p>
+            </a>
+            <button id="headerNavMenuButton" onclick="openMenu()" 
+                class=" 
+                    ml-auto flex flex-wrap items-center justify-center w-10 h-10
+                    hover:bg-pri-o-10
+                    lg:hidden transition-bg ease-linear duration-100
+                ">
+                <span id="headerMobileNavButtonIcon" class="material-symbols-outlined">menu</span>
+            </button>
+            <nav id="headerNav" class=" z-20
+                    absolute overflow-hidden right-0 flex flex-col shadow-lg border-t border-b border-pri top-32 bg-gray-100 
+                    flex-wrap items-center text-base justify-center py-4 align-self-end
+
+                    lg:ml-auto lg:relative lg:top-0 lg:flex lg:flex-row lg:shadow-none 
+                    lg:border-none lg:bg-transparent lg:py-0 lg:w-auto
+
+                   transition-size ease-in-out duration-300 w-0
+                ">
+
+                <a href="./galerie.html" class="
+                        link w-full pl-5 py-3 
+                        md:text-center 
+                        lg:w-auto lg:mr-5 lg:pl-0 lg:py-0
+                        hover:bg-pri-o-20 hover:text-pri
+                        lg:hover:bg-transparent
+                    ">
+                    Galerie
+                </a>
+                <a href="./kontakt.html" class="
+                        link w-full pl-5 py-3 
+                        md:text-center
+                        lg:hidden
+                        hover:bg-pri-o-20 hover:text-pri
+                    ">
+                    Kontakt
+                </a>
+                <a href="./kontakt.html"
+                    class="w-full lg:w-auto h-full hover:bg-pri-o-20 lg:hover:bg-transparent hidden lg:block">
+                    <button class="button-sec felx py-1 px-3 text-base font-sec items-center">
+                        Kontakt
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-4 h-4 ml-1 hidden lg:block" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main class="">
+        <section class="text-gray-600 body-font relative">
+            <div class="container px-5 py-20 mx-auto flex flex-col sm:flex-nowrap flex-wrap items-center">
+                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-16 text-gray-900 text-center">Kontakt</h1>
+                <div class="flex flex-col lg:flex-row-reverse w-full xl:w-10/12">
+                    <div class="lg:w-1/2 relative">
+                        <div class="mb-8 lg:text-center">
+                            <h2 class="text-gray-900 text-xl lg:text-2xl mb-4 font-medium title-font">Hier sind wir zu Erreichen</h2>
+                            <p class="text-md">Bahnhofsplatz 9 74363 Güglingen</p>
+                            <p class="text-md">
+                                Telefon: <a class="underline hover:text-pri" href="tel:+497135938453">07135-938453</a>
+                            </p>
+                            <p>Telefax: 07135-938454</p>
+                            <p class="text-md">E-Mail: 
+                                <a class="underline hover:text-pri" href="mailto:jw@stein-wuetherich.de">jw@stein-wuetherich.de</a>
+                            </p>
+                        </div>
+                    </div>
+                    <form class="w-full lg:w-1/2 mb-24 lg:mb-0">
+                        <div class="mx-auto">
+                            <div class="flex flex-wrap -m-2">
+                                <div class="p-2 w-full">
+                                    <div>
+                                        Name <span class="text-red-500">*</span>
+                                    </div>
+                                    <input id="name"
+                                        class="w-full bg-white border border-gray-400 focus:outline focus:border-sec focus:outline-sec text-base px-4 py-2"
+                                        placeholder="" type="text" required>
+                                </div>
+                                <div class="p-2 w-full">
+                                    <div>
+                                        Email <span class="text-red-500">*</span>
+                                    </div>
+                                    <input id="email"
+                                        class="w-full bg-white border border-gray-400 focus:outline focus:border-sec focus:outline-sec text-base px-4 py-2"
+                                        placeholder="" type="email" required>
+                                </div>
+                                <div class="p-2 w-full">
+                                    <div>Ort</div>
+                                    <input id="city"
+                                        class="w-full bg-white border border-gray-400 focus:outline focus:border-sec focus:outline-sec text-base px-4 py-2"
+                                        placeholder="" type="text">
+                                </div>
+                                <div class="p-2 w-full">
+                                    <div>
+                                        Telefon <span class="text-red-500">*</span>
+                                    </div>
+                                    <input id="phone"
+                                        class="w-full bg-white border border-gray-400 focus:outline focus:border-sec focus:outline-sec text-base px-4 py-2"
+                                        placeholder="" type="number" required>
+                                </div>
+                                <div class="p-2 w-full">
+                                    <div>
+                                        Nachricht <span class="text-red-500">*</span>
+                                    </div>
+                                    <textarea id="message"
+                                        class="w-full bg-white border border-gray-400 focus:outline focus:border-sec focus:outline-sec text-base px-4 py-2 resize-none block"
+                                        placeholder="" required></textarea>
+                                </div>
+                                <div class="p-2 pt-8 w-full">
+                                    <p>
+                                        <span class="text-red-500">*</span> Mit dem Absenden der Anfrage erkläre ich mich
+                                        einverstanden,
+                                        dass meine in das Kontaktformular eingegebenen Daten elektronisch
+                                        gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden.
+                                        Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann. <br>
+                                        Für nähere Hinweise siehe <a href="./datenschutz.html"
+                                            class="underline hover:text-pri">Datenschutzerklärung</a>
+                                    </p>
+                                </div>
+                                <div id="errorInfo" class="p-2 pt-4 w-full hidden text-red-500 font-bold">
+                                    <p class="text-color-sec text-lg"></p>
+                                </div>
+                                <div class="p-2 w-full text-center">
+                                    <button onclick="sendMail()"class="button-pri" type="button">Senden</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>            
+        </section>
+        <section class="text-gray-600 body-font relative">
+            <div class="container px-5 py-24 mx-auto flex flex-col sm:flex-nowrap flex-wrap">
+                <div class="map--iframeContainer w-full h-full">
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-16 text-gray-900 text-center">Anfahrt</h1>
+                    <div class="flex flex-col items-center">
+                        <img src="../img/anfahrt.png" alt="Bild zur Anfahrt" class="w-full max-w-[1280px]">
+                        <div class="w-full max-w-[1280px]">
+                            <a class="underline hover:text-pri text-xl mb-4" href="https://www.google.com/maps/dir//Maulbronner+Str.+47+74363+G%C3%BCglingen/@49.0669106,8.9937131,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47978112c7e354eb:0xce67ce1420985bd3!2m2!1d8.9937131!2d49.0669106" target="_blank" rel="noopener noreferrer">Zu Google Maps</a>
+                        </div>
+                    </div>
+                    <!-- <img src="../img/metschLocation-sm.png" alt="Bild zur Anfahrt" class="block lg:hidden"> -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center md:flex-row flex-col relative">
+            <a href="../index.html" class="flex flex-col title-font font-medium mb-4 items-center md:flex-row md:mb-0 md:justify-start justify-center">
+                <img src="../img/icon.jpg" alt="logo" class="w-24 mb-6 lg:mb-0">
+                <p class="ml-6 text-2xl color-pri font-pri hidden sm:block">Steingestaltung Jürgen Wütherich</p>
+            </a>
+            <div class="flex flex-col items-center w-1/2 text-center md:w-auto md:flex-row md:ml-auto md:mt-0 mt-4 justify-center md:justify-start">
+                <a href="./impressum.html" class="py-2 w-full md:w-auto hover:text-pri">Impressum</a>
+                <a href="./datenschutz.html" class="py-2 w-full md:w-auto md:ml-3 hover:text-pri">Datenschutz</a>
+                <p class="py-2 block md:hidden opacity-50 text-sm">Erstellt von: <a href="https://pcbit.de" class="text-blue-700 hover:opacity-100 hover:text-pri" target="blank">PCbit</a></p>
+            </div>
+            <p class="hidden md:block absolute right-5 bottom-8 opacity-50 text-sm">Erstellt von: <a href="https://pcbit.de" target="blank" class="text-blue-700 hover:opacity-100 hover:text-pri">PCbit</a></p>
+        </div>
+    </footer>
+</body>
+<script src="../js/main.js"></script>
+
+</html>
