@@ -5,4 +5,6 @@ GitHub:
 Delete Local Branch: git branch -d local_branch_name
 Change User: git config --global user.name "MarcelPCbit"
 
+Docs = Public dir
+
 Link: https://marcelpcbit.github.io/steingestaltung-jw/
