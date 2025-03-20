@@ -34,43 +34,23 @@
         <div class="container mx-auto flex p-5 md:flex-row lg:flex-row items-center justify-center">
             <a href="../index.html" class="flex title-font font-medium items-center">
                 <img src="../img/icon.jpg" alt="icon" class="w-16">
-                <p class="ml-6 text-2xl color-pri font-pri flex flex-col md:flex-row gap-2"><span>Steingestaltung</span> <span class="hidden sm:block">Jürgen Wütherich</span></p>
+                <p class="ml-6 text-2xl color-pri font-pri flex flex-col md:flex-row gap-2" style="margin-bottom: 0;"><span class="text-xl sm:text-2xl">Steingestaltung</span> <span class="hidden sm:block">Jürgen Wütherich</span></p>
             </a>
-            <button id="headerNavMenuButton" onclick="openMenu()" class=" 
+            <button id="headerNavMenuButton" onclick="toggleNav()" 
+                class=" 
                     ml-auto flex flex-wrap items-center justify-center w-10 h-10
                     hover:bg-pri-o-10
                     lg:hidden transition-bg ease-linear duration-100
                 ">
                 <span id="headerMobileNavButtonIcon" class="material-symbols-outlined">menu</span>
             </button>
-            <nav id="headerNav" class=" z-20
-                    absolute overflow-hidden right-0 flex flex-col shadow-lg border-t border-b border-pri top-32 bg-gray-100 
-                    flex-wrap items-center text-base justify-center py-4 align-self-end
-
-                    lg:ml-auto lg:relative lg:top-0 lg:flex lg:flex-row lg:shadow-none 
-                    lg:border-none lg:bg-transparent lg:py-0 lg:w-auto
-
-                   transition-size ease-in-out duration-300 w-0
-                ">
-
-                <a href="./galerie.html" class="
-                        link w-full pl-5 py-3 
-                        md:text-center 
-                        lg:w-auto lg:mr-5 lg:pl-0 lg:py-0
-                        hover:bg-pri-o-20 hover:text-pri
-                        lg:hover:bg-transparent
+            <nav id="headerNavDesktop" class="headerNavDesktop">
+                <a href="./.sites/galerie.html" class="
+                        link px-3 py-1
                     ">
                     Galerie
                 </a>
-                <a href="./kontakt.html" class="
-                        link w-full pl-5 py-3 
-                        md:text-center
-                        lg:hidden
-                        hover:bg-pri-o-20 hover:text-pri
-                    ">
-                    Kontakt
-                </a>
-                <a href="./kontakt.html"
+                <a href="../sites/kontakt.html"
                     class="w-full lg:w-auto h-full hover:bg-pri-o-20 lg:hover:bg-transparent hidden lg:block">
                     <button class="button-sec felx py-1 px-3 text-base font-sec items-center">
                         Kontakt
@@ -79,6 +59,20 @@
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </button>
+                </a>
+            </nav>
+            <nav id="headerNavMobile" class="headerNavMobile">
+                <a href="../sites/galerie.html" class="
+                        link w-full pl-5 py-3 
+                        hover:bg-pri-o-20 hover:text-pri
+                    ">
+                    Galerie
+                </a>
+                <a href="../sites/kontakt.html" class="
+                        link w-full pl-5 py-3
+                        hover:bg-pri-o-20 hover:text-pri
+                    ">
+                    Kontakt
                 </a>
             </nav>
         </div>

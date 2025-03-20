@@ -137,4 +137,19 @@
     .imgWithPopup {
         @apply w-full h-full max-w-80 max-h-80 object-cover object-center cursor-pointer;
     }
+    .headerNavDesktop {
+        @apply  hidden items-center right-0 overflow-hidden text-base gap-2 
+                lg:flex lg:flex-row lg:ml-auto lg:relative lg:top-0  lg:shadow-none 
+                lg:border-none lg:bg-transparent lg:py-0 lg:w-min
+    }
+    .headerNavMobile {
+        @apply  absolute overflow-hidden right-0 flex flex-col shadow-lg border-t border-b border-pri top-26 bg-gray-100 
+                flex-wrap items-center text-base justify-center py-4
+                lg:hidden
+                ease-in-out duration-300 w-0
+    }
+
+    .indexImg {
+        @apply h-64 md:h-96 max-w-3xs md:max-w-svh;
+    }
 }

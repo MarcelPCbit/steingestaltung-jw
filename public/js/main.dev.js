@@ -5,7 +5,7 @@ var menuOpen = false;
 var headerNav = document.getElementById("headerNav");
 var headerNavMenuButton = document.getElementById("headerNavMenuButton");
 
-function openMenu() {
+function toggleNav() {
   if (menuOpen) {
     hideHaederNav();
   } else {
