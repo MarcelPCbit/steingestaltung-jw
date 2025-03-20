@@ -1,0 +1,8 @@
+Tailwind: 
+npx @tailwindcss/cli -i ./src/tailwind.css -o ./public/css/tailwind.css --watch
+
+GitHub:
+Delete Local Branch: git branch -d local_branch_name
+Change User: git config --global user.name "MarcelPCbit"
+
+Link: https://marcelpcbit.github.io/steingestaltung-jw/
